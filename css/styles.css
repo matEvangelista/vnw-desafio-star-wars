@@ -46,6 +46,10 @@ header>img:nth-of-type(5) {
     margin-top: 33%;
 }
 
+main {
+    display: flex;
+}
+
 .card-inicial {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 20vw;
@@ -59,7 +63,7 @@ header>img:nth-of-type(5) {
 
     text-align: center;
 
-    position: relative;
+    position: absolute;
     margin-left: 20%;
     z-index: 1;
     background-image: url("../img/strom\ trupe\ red.png");
@@ -106,4 +110,31 @@ header>img:nth-of-type(5) {
 
 .card-inicial a:not(:hover)>p {
     transition: 0.1s;
+}
+
+.img-sob-card {
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+}
+
+.img-container {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    margin-top: 30%;
+    margin-left: 20%;
+    margin-right: 5%;
+    justify-content: space-between;
+}
+
+.img-lord-sith {
+    width: 60%;
+    height: max-content;
+}
+
+.img-ray {
+    width: 28%;
+    height: max-content;
+    align-self: flex-end;
 }
