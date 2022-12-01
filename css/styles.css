@@ -46,6 +46,43 @@ header > img:nth-of-type(5) {
     margin-top: 33%;
 }
 
-main {
-    z-index: 0;
+.card-inicial {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 20vw;
+    height: 29.42vw; /*seguindo as proporções da imagem de fundo*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+
+    position: relative;
+    margin-left: 20%;
+    z-index: 1;
+    background-image: url("../img/strom\ trupe\ red.png");
+    background-repeat: no-repeat;
+    margin-top: -3%;
+    color: white;
+}
+
+.card-inicial > * {
+    margin: 15px;
+}
+
+.card-inicial h2 {
+    font-size: 4vh;
+}
+
+.card-inicial p {
+    font-size: 2.5vh;
+}
+
+.card-inicial a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
 }
