@@ -48,6 +48,24 @@ header>img:nth-of-type(5) {
 
 main {
     display: flex;
+    flex-direction: column;
+}
+
+.primeira-section {
+    position: unset;
+    z-index: 1;
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    border-bottom: 3px solid gray;
+    padding-bottom: 30px;
+}
+
+.primeira-section img {
+    height: 15vw;
+    position: static;
+    align-self: flex-end;
 }
 
 .card-inicial {
@@ -63,8 +81,6 @@ main {
 
     text-align: center;
 
-    position: absolute;
-    margin-left: 20%;
     z-index: 1;
     background-image: url("../img/strom\ trupe\ red.png");
     background-repeat: no-repeat;
@@ -112,24 +128,23 @@ main {
     transition: 0.1s;
 }
 
-.img-sob-card {
+.img-lateral {
     position: absolute;
     z-index: -1;
-    width: 50%;
+    width: 38%;
 }
 
-.img-container {
+.img-nav-container {
     display: flex;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    margin-top: 30%;
-    margin-left: 20%;
-    margin-right: 5%;
+    width: 80%;
+    align-self: center;
     justify-content: space-between;
 }
 
 .img-lord-sith {
-    width: 60%;
+    width: 55%;
     height: max-content;
 }
 
@@ -137,4 +152,51 @@ main {
     width: 28%;
     height: max-content;
     align-self: flex-end;
+}
+
+.img-nav-container div {
+    position: absolute;
+}
+
+.estrutura {
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 40%;
+    margin-top: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 30px;
+    width: fit-content;
+    z-index: 3;
+}
+
+.estrutura h2 {
+    font-size: 5vh;
+    width: 80%;
+    align-self: flex-end;
+}
+
+.estrutura ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: right;
+    gap: 10px;
+    font-size: 2.5vh;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.estrutura li {
+    padding: 3px;
+    background: linear-gradient(to left, rgb(238, 77, 77) 50%, rgba(0,0,0,0) 50%) left;
+    background-size: 200%;
+    transition: 1s;
+}
+
+.estrutura li:hover {
+    background-position: right;
+    color: white;
+    cursor: pointer;
 }
