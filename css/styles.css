@@ -56,19 +56,19 @@ header>img:nth-of-type(4) {
     border-bottom: 2px solid black;
 }
 
-.card-legiao > div {
+.card-legiao>div {
     display: flex;
     gap: 10px;
 }
 
-.card-legiao > div button {
+.card-legiao>div button {
     padding: 1px;
     border-radius: 50%;
     border: none;
     color: black;
 }
 
-.card-legiao > div button:hover {
+.card-legiao>div button:hover {
     cursor: pointer;
     background-color: lightgray;
 }
@@ -256,21 +256,29 @@ main {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-}
-
-.atributos-container h2 {
-    margin: 6% 0 5% 10%;
-    font-size: 5vh;
+    gap: 60px;
+    padding-bottom: 5%;
 }
 
 .img-atributos-container {
-    display: flex;
     align-self: center;
+    display: flex;
 }
 
-.img-atributos-container>img {
-    width: 600px;
+.atributos-container div {
+    background-position: center;
+}
+
+.atributos-container h2:first-of-type {
+    margin: 6% 0 0 10%;
+    font-size: 5vh;
+}
+
+.primeira-imagem {
+    height: 24.36vw;
+    width: 40vw;
+    background-image: url("../img/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12.png");
+    background-repeat: no-repeat;
 }
 
 .atributos-sub-container {
@@ -278,10 +286,92 @@ main {
     flex-direction: column;
 }
 
-.atributos-sub-container figure {
+.imgs-laterais {
+    height: 12.18vw;
+    width: 20vw;
+}
+
+.container-de-imgs-laterais {
     display: flex;
 }
 
-.imagem-sub-container {
-    width: 300px;
+.img1 {
+    background-image: url("../img/Security_stormtrooper_HUC2-FF-003301.png");
+}
+
+.img2 {
+    background-image: url("../img/star\ game.png");
+}
+
+.img3 {
+    background-image: url("../img/naves\ em\ batalha\ star\ wars.png");
+}
+
+.img4 {
+    background-image: url("../img/stormtrup.png");
+}
+
+.atributos-container>img {
+    width: 80vw;
+    align-self: center;
+}
+
+.atributos-container>h2:last-of-type {
+    align-self: center;
+    font-size: 5vh;
+    margin-top: 10%;
+}
+
+.tres-opcoes {
+    width: 80%;
+    margin-top: -20%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.tres-opcoes img {
+    width: 30%;
+}
+
+.opcao {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    width: 20%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-self: flex-end;
+    justify-content: space-evenly;
+}
+
+.opcao p {
+    font-size: 17px;
+}
+
+.opcao span {
+    width: 50%;
+    height: 4px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.opcao a {
+    text-decoration: none;
+    padding: 10px;
+    width: 40%;
+    color: white;
+    background: linear-gradient(to right, red 50%, black 50%) right;
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+.opcao a:hover {
+    background-position: left;
+}
+
+.opcao a:hover ~ span {
+    background-color: red;
 }
