@@ -3,9 +3,9 @@
     margin: 0;
 }
 
-header {
-    height: fit-content;
-    width: 100%;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 header>img:nth-of-type(1) {
@@ -38,15 +38,45 @@ header>img:nth-of-type(4) {
     margin-top: 25%;
 }
 
-header>img:nth-of-type(5) {
+.card-legiao {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
-    position: relative;
-    width: 10%;
+    position: absolute;
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8%;
     margin-left: 75%;
     margin-top: 33%;
 }
 
+.card-legiao h2 {
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+.card-legiao > div {
+    display: flex;
+    gap: 10px;
+}
+
+.card-legiao > div button {
+    padding: 1px;
+    border-radius: 50%;
+    border: none;
+    color: black;
+}
+
+.card-legiao > div button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+
 main {
+    margin-top: 43%;
+    position: static;
     display: flex;
     flex-direction: column;
 }
@@ -62,10 +92,26 @@ main {
     padding-bottom: 30px;
 }
 
-.primeira-section img {
+.card-sobre {
     height: 15vw;
     position: static;
     align-self: flex-end;
+    display: flex;
+    gap: 40px;
+    width: 60%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-sobre figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: end;
+}
+
+.card-sobre figcaption h2 {
+    padding-bottom: 5px;
+    border-bottom: 3px solid gray;
 }
 
 .card-inicial {
@@ -106,7 +152,7 @@ main {
     border: 2px solid white;
     border-radius: 5px;
     padding: 10px 40px 10px 40px;
-    background: linear-gradient(to left, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 50%) right;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 50%) right;
     background-size: 200%;
     transition: 0.5s;
 }
@@ -190,7 +236,7 @@ main {
 
 .estrutura li {
     padding: 3px;
-    background: linear-gradient(to left, rgb(238, 77, 77) 50%, rgba(0,0,0,0) 50%) left;
+    background: linear-gradient(to left, rgb(238, 77, 77) 50%, rgba(0, 0, 0, 0) 50%) left;
     background-size: 200%;
     transition: 1s;
 }
@@ -223,7 +269,7 @@ main {
     align-self: center;
 }
 
-.img-atributos-container > img {
+.img-atributos-container>img {
     width: 600px;
 }
 
