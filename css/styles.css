@@ -110,6 +110,7 @@ main {
 }
 
 .card-sobre {
+    width: 72%;
     align-items: flex-start;
     position: static;
     align-self: flex-end;
