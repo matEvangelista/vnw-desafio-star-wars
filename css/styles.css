@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(11px + 0.390625vw);
 }
 
 body {
@@ -62,7 +62,7 @@ header figure img {
     justify-content: space-between;
     height: 8%;
     margin-left: 75%;
-    margin-top: 33%;
+    margin-top: 30%;
 }
 
 .card-legiao h2 {
@@ -96,6 +96,9 @@ header figure img {
 main {
     display: flex;
     flex-direction: column;
+    background-image: url("../img/sta\ uo\ robot.png");
+    background-repeat: no-repeat;
+    background-position: top left;
 }
 
 .primeira-section {
@@ -106,32 +109,38 @@ main {
     align-self: center;
     justify-content: space-between;
     border-bottom: 3px solid gray;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .card-sobre {
-    width: 72%;
+    width: 70%;
     align-items: flex-start;
     position: static;
     align-self: flex-end;
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .card-sobre figcaption {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    text-align: end;
+    justify-content: space-between;
+    align-self: center;
+    height: 100%;
+    text-align: right;
 }
 
 .card-sobre figcaption h2 {
     padding-bottom: 5px;
     border-bottom: 3px solid gray;
+    width:fit-content;
+    align-self: flex-end;
 }
 
 .card-sobre img {
     align-self: center;
+    width: auto;
 }
 
 .card-inicial {
@@ -194,10 +203,9 @@ main {
     transition: 0.1s;
 }
 
-.img-lateral {
-    position: absolute;
-    z-index: -1;
-    width: 38%;
+.estrutura-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .img-nav-container {
@@ -220,14 +228,10 @@ main {
     align-self: flex-end;
 }
 
-.img-nav-container div {
-    position: absolute;
-}
-
 .estrutura {
     position: absolute;
-    margin-left: 40%;
-    margin-top: 40%;
+    align-self: center;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -269,7 +273,7 @@ main {
 .atributos-container {
     background-color: rgb(45, 45, 45);
     color: white;
-    margin-top: -5.2%;
+    margin-top: -5.3%;
     width: 100%;
 
     display: flex;
@@ -461,4 +465,70 @@ footer>img {
 
 .texto-final {
     font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .primeira-section, .estrutura-container, .tres-opcoes, .informacoes {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .card-sobre {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .card-sobre img {
+        align-self: flex-end;
+    }
+    .img-atributos-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .primeira-imagem {
+        width: 80vw;
+        height: 40vw;
+    }
+    .container-de-imgs-laterais {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+    }
+    .expansivel {
+        height: 40vw;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .primeira-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 96%;
+        margin-top: 4%;
+        gap: 20px;
+    }
+    .primeira-section > * {
+        align-self: center;
+    }
+
+    .card-sobre img {
+        align-self: center;
+    }
+    
+    .img-nav-container {
+        display: none
+    }
+
+    .estrutura {
+        position:unset;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+
 }
