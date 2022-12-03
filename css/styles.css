@@ -328,6 +328,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    margin-bottom: 10%;
 }
 
 .tres-opcoes img {
@@ -374,4 +375,59 @@ main {
 
 .opcao a:hover ~ span {
     background-color: red;
+}
+
+footer {
+    background: linear-gradient(to right,  #FF5A56 60%, white 40%);
+    display: flex;
+    align-items: flex-end;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: white;
+    margin-left: 10%;
+    justify-content: space-between;
+    height: 65vh;
+    margin-bottom: 5%;
+    margin-top: 5;
+}
+
+footer > img {
+    width: 40%;
+    margin: -10% 0 0 9%;
+}
+
+.informacoes h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vh;
+}
+
+.imgs-download {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8%;
+    border-bottom: 3px solid #D74430;
+}
+
+.imgs-download * {
+    width: 45%;
+}
+
+.star-wars-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.star-wars-final img {
+    width: 50%;
+}
+
+.texto-final {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vh;
 }
