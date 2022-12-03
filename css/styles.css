@@ -281,6 +281,10 @@ main {
     background-repeat: no-repeat;
 }
 
+.primeira-imagem:hover .expansivel {
+    display: block;
+}
+
 .atributos-sub-container {
     display: flex;
     flex-direction: column;
@@ -289,6 +293,14 @@ main {
 .imgs-laterais {
     height: 12.18vw;
     width: 20vw;
+}
+
+.imgs-laterais:hover .expansivel{
+    display: block;
+}
+
+.expansivel {
+    display: none;
 }
 
 .container-de-imgs-laterais {
