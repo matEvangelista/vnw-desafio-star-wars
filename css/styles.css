@@ -416,6 +416,10 @@ footer > img {
     width: 45%;
 }
 
+.imgs-download img:hover {
+    cursor: pointer;
+}
+
 .star-wars-final {
     display: flex;
     flex-direction: column;
