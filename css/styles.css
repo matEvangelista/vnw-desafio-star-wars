@@ -296,11 +296,23 @@ main {
     font-size: 2rem;
 }
 
+.atributos-container > p {
+    align-self: flex-end;
+    margin-right: 10%;
+    font-size: 0.8rem;
+    width: 50%;
+    text-align: end;
+    position: relative;
+}
+
 .primeira-imagem {
     height: 24.36vw;
     width: 40vw;
     background-image: url("../img/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12.png");
     background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .primeira-imagem:hover .expansivel {
@@ -308,8 +320,8 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
 }
 
 .atributos-sub-container {
@@ -320,10 +332,15 @@ main {
 .imgs-laterais {
     height: 12.18vw;
     width: 20vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .expansivel {
     display: none;
+    align-self: center;
+    position: absolute;
     transition: 0.5s;
 }
 
@@ -333,8 +350,10 @@ main {
     align-items: center;
     justify-content: space-evenly;
     font-size: 80%;
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
+    align-self: center;
+    position: absolute;
 }
 
 .imgs-laterais:hover .expansivel h2{
@@ -366,16 +385,36 @@ main {
     background-image: url("../img/Security_stormtrooper_HUC2-FF-003301.png");
 }
 
+.exp1 {
+    background-color: rgba(84, 147, 255, 0.4);
+}
+
 .img2 {
     background-image: url("../img/star\ game.png");
+}
+
+.exp2 {
+    background-color: rgba(196, 32, 32, 0.4);
 }
 
 .img3 {
     background-image: url("../img/naves\ em\ batalha\ star\ wars.png");
 }
 
+.exp3 {
+    background-color: rgba(59, 152, 59, 0.4);
+}
+
 .img4 {
     background-image: url("../img/stormtrup.png");
+}
+
+.exp4 {
+    background-color: rgba(241, 255, 83, 0.4);
+}
+
+.exp5 {
+    background-color: rgba(255, 83, 149, 0.4);
 }
 
 .atributos-container>img {
@@ -415,7 +454,7 @@ main {
 }
 
 .opcao p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .opcao span {
