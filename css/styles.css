@@ -474,6 +474,13 @@ main {
     text-align: center;
     align-self: flex-end;
     justify-content: space-evenly;
+    position: relative;
+}
+
+.opcao h2 {
+    position: absolute;
+    margin-bottom: 90%;
+    transition: 0.5s;
 }
 
 .opcao p {
@@ -501,8 +508,12 @@ main {
     background-position: left;
 }
 
-.opcao a:hover~span {
+.opcao a:hover ~ span {
     background-color: red;
+}
+
+.opcao a:hover + h2 {
+    transform: scale(1.3);
 }
 
 footer {
