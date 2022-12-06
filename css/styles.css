@@ -328,8 +328,29 @@ main {
     position: relative; /*haverá divs com position: absolute dentro destas divs*/
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content:center;
+}
+
+.border-top-left {
+    display: none;
+    position: absolute;
+    width: 16%;
+    height: 25%;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    margin-bottom: 45%;
+    align-self: flex-start;
+}
+
+.border-bottom-right {
+    position: absolute;
+    display: none;
+    width: 16%;
+    height: 25%;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    align-self: flex-end;
+    margin-top: 45%;
 }
 
 .img1 {
@@ -355,6 +376,12 @@ main {
 .img-hover:hover .expansivel { /*mostra o conteúdo dentro da div imgn*/
     display: flex;
     align-self: center;
+}
+.img-hover:hover > .border-top-left {
+    display: block;
+}
+.img-hover:hover > .border-bottom-right {
+    display: block;
 }
 .expansivel {
     width: 105%;
