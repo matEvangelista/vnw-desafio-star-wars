@@ -4,6 +4,7 @@
     border: 0;
 }
 
+/*Será usado como REM depois*/
 html {
     font-size: calc(11px + 0.390625vw);
 }
@@ -101,7 +102,7 @@ main {
     background-position: top left;
 }
 
-.primeira-section {
+.apresentacao {
     position: unset;
     z-index: 1;
     width: 80%;
@@ -143,7 +144,7 @@ main {
     width: auto;
 }
 
-.card-inicial {
+.card-vermelho {
     width: 25%;
     min-width: 300px;
     height: fit-content;
@@ -161,20 +162,20 @@ main {
     color: white;
 }
 
-.card-inicial>* {
+.card-vermelho>* {
     margin: 15px;
     padding: 40px 0 40px 0;
 }
 
-.card-inicial h2 {
+.card-vermelho h2 {
     font-size: 1.5rem;
 }
 
-.card-inicial a {
+.card-vermelho a {
     font-size: 1rem;
 }
 
-.card-inicial a {
+.card-vermelho a {
     text-decoration: none;
     color: white;
     border: 2px solid white;
@@ -186,23 +187,26 @@ main {
     margin-bottom: 10%;
 }
 
-.card-inicial a:hover {
+.card-vermelho a:hover {
     background-position: left;
 }
 
-.card-inicial a:hover>p {
+.card-vermelho a:hover>p {
     transition: 0.5s ease-in-out;
     scale: 1.15;
 }
 
-.card-inicial a:hover {
+.card-vermelho a:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.card-inicial a:not(:hover)>p {
+.card-vermelho a:not(:hover)>p {
     transition: 0.1s;
 }
 
+/*FIM DA PRIMEIRA SECTION*/
+
+/*ESTRUTURA DE JOGO*/
 .estrutura-container {
     display: flex;
     flex-direction: column;
@@ -282,16 +286,7 @@ main {
     padding-bottom: 5%;
 }
 
-.img-atributos-container {
-    align-self: center;
-    display: flex;
-}
-
-.atributos-container div {
-    background-position: center;
-}
-
-.atributos-container h2:first-of-type {
+.atributos-container > h2:first-of-type {
     margin: 6% 0 0 10%;
     font-size: 2rem;
 }
@@ -305,59 +300,100 @@ main {
     position: relative;
 }
 
-.primeira-imagem {
-    height: 24.36vw;
-    width: 40vw;
-    background-image: url("../img/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12.png");
+/*SEÇÃO ATRIBUTOS - PARTE DAS IMAGENS - EVITANDO USAR DIVS O MÁXIMO POSSÍVEL*/
+.imagens-outter {
+    align-self: center;
+    width: 80vw;
+    height: 24.368932vw; /*Seguindo as proporcões das images de fundo*/
+    display: flex;
+}
+.imagens-inner {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.imgs-top, .imgs-bottom {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.img1, .img2, .img3, .img4, .img5 {
+    width: 50%;
+    height: 100%;
     background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.primeira-imagem:hover .expansivel {
+    background-position: center;
+    background-size: contain;
+    position: relative; /*haverá divs com position: absolute dentro destas divs*/
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    width: 105%;
-    height: 105%;
-}
-
-.atributos-sub-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.imgs-laterais {
-    height: 12.18vw;
-    width: 20vw;
-    position: relative;
-    display: flex;
     justify-content: center;
 }
 
+.img1 {
+    background-image: url("../img/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12.png");
+}
+
+.img2 {
+    background-image: url("../img/Security_stormtrooper_HUC2-FF-003301.png");
+}
+
+.img3 {
+    background-image: url("../img/star\ game.png");
+}
+
+.img4 {
+    background-image: url("../img/naves\ em\ batalha\ star\ wars.png");
+}
+
+.img5 {
+    background-image: url("../img/stormtrup.png");
+}
+
+.img-hover:hover .expansivel { /*mostra o conteúdo dentro da div imgn*/
+    display: flex;
+    align-self: center;
+}
 .expansivel {
-    display: none;
-    align-self: center;
-    position: absolute;
-    transition: 0.5s;
-}
-
-.imgs-laterais:hover .expansivel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 80%;
     width: 105%;
-    height: 105%;
-    align-self: center;
+    height: 110%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
+    font-size: 80%;
+    align-self: center;
 }
 
-.imgs-laterais:hover .expansivel h2{
-    font-size: 200%;
+.img1 .expansivel {
+    font-size: 120%;
+}
+
+.expansivel > * {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.exp1 {
+    background-color: rgba(99, 12, 59, 0.4);
+}
+
+.exp2 {
+    background-color: rgba(255, 68, 68, 0.4);
+}
+
+.exp3 {
+    background-color: rgba(0,255,0,.4);
+}
+
+.exp4 {
+    background-color: rgba(255, 251, 16, 0.4);
+}
+
+.exp5 {
+    background-color: rgba(0,0,255,0.4);
 }
 
 .leia-mais {
@@ -375,46 +411,6 @@ main {
 .leia-mais:hover {
     transform: scale(1.1);
     background-position: left;
-}
-
-.container-de-imgs-laterais {
-    display: flex;
-}
-
-.img1 {
-    background-image: url("../img/Security_stormtrooper_HUC2-FF-003301.png");
-}
-
-.exp1 {
-    background-color: rgba(84, 147, 255, 0.4);
-}
-
-.img2 {
-    background-image: url("../img/star\ game.png");
-}
-
-.exp2 {
-    background-color: rgba(196, 32, 32, 0.4);
-}
-
-.img3 {
-    background-image: url("../img/naves\ em\ batalha\ star\ wars.png");
-}
-
-.exp3 {
-    background-color: rgba(59, 152, 59, 0.4);
-}
-
-.img4 {
-    background-image: url("../img/stormtrup.png");
-}
-
-.exp4 {
-    background-color: rgba(241, 255, 83, 0.4);
-}
-
-.exp5 {
-    background-color: rgba(255, 83, 149, 0.4);
 }
 
 .atributos-container>img {
@@ -560,14 +556,14 @@ footer>img {
         display: flex;
         flex-direction: column;
     }
-    .primeira-imagem {
+    .primeira-imagem, .atributos-sub-container {
         width: 80vw;
         height: 40vw;
     }
     .container-de-imgs-laterais {
         display: flex;
         flex-direction: column;
-        width: max-content;
+        width: 100%;
     }
     .expansivel {
         height: 40vw;
