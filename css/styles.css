@@ -542,12 +542,12 @@ main {
     transition: 0.5s;
 }
 
-.opcao a:hover {
+.opcao:hover a {
     background-position: left;
 }
 
-.opcao a:hover ~ span {
-    background-color: red;
+.opcao:hover h2 {
+    transform: scale(1.1);
 }
 
 .opcao a:hover + h2 {
