@@ -350,25 +350,27 @@ main {
 }
 
 .border-top-left {
-    display: none;
     position: absolute;
-    width: 16%;
-    height: 25%;
+    width: 0%;
+    height: 0%;
     border-top: 3px solid white;
     border-left: 3px solid white;
     margin-bottom: 45%;
     align-self: flex-start;
+    transition: 1s;
+    transform: scale(0.0001);
 }
 
 .border-bottom-right {
     position: absolute;
-    display: none;
-    width: 16%;
-    height: 25%;
+    width: 0%;
+    height: 0%;
+    transform: scale(0.0001);
     border-bottom: 3px solid white;
     border-right: 3px solid white;
     align-self: flex-end;
     margin-top: 45%;
+    transition: 1s;
 }
 
 .img1 {
@@ -398,25 +400,36 @@ main {
 .img-hover:hover .expansivel { /*mostra o conteúdo dentro da div imgn*/
     display: flex;
     align-self: center;
+    width: 105%;
+    height: 110%;
+    transform: scale(1);
 }
 .img-hover:hover .saiba-mais {
     display: none
 }
 .img-hover:hover > .border-top-left {
     display: block;
+    width: 16%;
+    height: 25%;
+    transform: scale(1);
 }
 .img-hover:hover > .border-bottom-right {
     display: block;
+    width: 16%;
+    height: 25%;
+    transform: scale(1);
 }
 .expansivel {
-    width: 105%;
-    height: 110%;
-    display: none;
+    width: 0%;
+    height: 0%;
     flex-direction: column;
     justify-content: space-evenly;
     position: absolute;
     font-size: 0.8rem;
     align-self: center;
+    transition: 1s;
+    overflow: hidden;
+    transform: scale(0.001);
 }
 
 .img1 .expansivel {
@@ -475,6 +488,8 @@ main {
     font-size: 2rem;
     margin-top: 10%;
 }
+
+/*Sub seção das opções*/
 
 .tres-opcoes {
     width: 80%;
