@@ -14,8 +14,6 @@ h1 {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -352,28 +350,26 @@ main {
     transition: 1s;
 }
 
-.border-top-left {
+.border-top-left, .border-bottom-right {
     position: absolute;
     width: 16%;
     height: 25%;
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    margin-bottom: 45%;
-    align-self: flex-start;
     transition: 1s;
     transform: scale(0.0001);
 }
 
+.border-top-left {
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    align-self: flex-start;
+    margin-left: 50%;
+}
+
 .border-bottom-right {
-    width: 16%;
-    height: 25%;
-    position: absolute;
-    transform: scale(0.0001);
     border-bottom: 3px solid white;
     border-right: 3px solid white;
     align-self: flex-end;
-    margin-top: 45%;
-    transition: 1s;
+    margin-right: 50%;
 }
 
 .img1 {
@@ -401,24 +397,29 @@ main {
 }
 
 .img-hover:hover .expansivel { /*mostra o conteúdo dentro da div imgn*/
-    display: flex;
-    align-self: center;
     transform: scale(1);
 }
 .img-hover:hover .saiba-mais {
-    transform: scale(0.00000001);
+    transform: scale(0.0001);
 }
 .img-hover:hover > .border-top-left {
-    display: block;
+    display: unset;
     transform: scale(1);
+    margin-bottom: 45%;
+    margin-left: 0;
 }
+
 .img-hover:hover > .border-bottom-right {
-    display: block;
+    display: unset;
     transform: scale(1);
+    margin-top: 45%;
+    margin-right: 0;
 }
+
 .expansivel {
     width: 105%;
     height: 110%;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: absolute;
@@ -430,14 +431,15 @@ main {
 }
 
 .img1 .expansivel {
-    font-size: 100%;
+    font-size: 1rem;
 }
 
 .expansivel > * {
-    margin-left: 10%;
+    align-self: center;
     width: 80%;
 }
 
+/*cores de cada div expansivel*/
 .exp1 {
     background-color: rgba(99, 12, 59, 0.4);
 }
@@ -458,6 +460,7 @@ main {
     background-color: rgba(0,0,255,0.4);
 }
 
+/*estilização do link*/
 .leia-mais {
     text-decoration: none;
     width: 25%;
