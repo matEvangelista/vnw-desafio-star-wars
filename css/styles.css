@@ -559,7 +559,7 @@ main {
 }
 
 .opcao:hover {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
 }
 
 .opcao a:hover  {
